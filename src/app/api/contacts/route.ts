@@ -8,7 +8,7 @@ export async function GET(){
         const data= await Contacts.find({})
       return NextResponse.json(data,{status:200});
     }
-    catch(error){
+    catch{
         return NextResponse.json({error:"Failed to GET"},{status:400})
     }
 }
@@ -23,7 +23,9 @@ try{
 
     return NextResponse.json({message:"Posted in the database"},{status:201})
 }
-catch(error){
-    return NextResponse.json({error:"Couldn;t post in the database"},{status:500})
+catch { 
+    return NextResponse.json({ error: "Couldn't post in the database" }, { status: 500 }); 
 }
+
+
 }

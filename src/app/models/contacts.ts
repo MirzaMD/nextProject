@@ -1,4 +1,4 @@
-import mongoose, {Schema, model, models} from "mongoose";
+import {Schema, model, models} from "mongoose";
 
 const contactsSchema=new Schema({
     name:{type:String,required:true},
